@@ -57,9 +57,9 @@ export const ChatMessageList = () => {
         )
         .map((mensagem) =>
           mensagem.autor.usuarioAtual ? (
-            <MyChatMessage mensagem={mensagem} />
+            <MyChatMessage mensagem={mensagem} key={mensagem.id} />
           ) : (
-            <ChatMessage mensagem={mensagem} />
+            <ChatMessage mensagem={mensagem} key={mensagem.id} />
           )
         )}
       {!endOfScroll ? (
